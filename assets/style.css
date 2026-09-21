@@ -264,6 +264,20 @@ p { color: var(--fg); margin: 0 0 1rem; }
   padding: 1.5rem;
 }
 
+.amenity-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.9rem;
+  color: var(--fg);
+}
+.amenity-icon svg { width: 1.2rem; height: 1.2rem; }
+
 .card-plate {
   height: 3.4rem;
   width: 3.4rem;
@@ -398,6 +412,39 @@ p { color: var(--fg); margin: 0 0 1rem; }
 .cta-banner .btn-primary { background: var(--surface); color: var(--fg); }
 .cta-banner .btn-outline { border-color: var(--surface); color: var(--surface); }
 .cta-banner .btn-outline:hover { background: var(--surface); color: var(--fg); }
+
+/* ---------- FAQ ---------- */
+.faq-list {
+  border-top: 1px solid var(--border);
+  max-width: 800px;
+}
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1.3rem 0;
+  font-weight: 500;
+  font-size: 0.98rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.3rem;
+  color: var(--muted);
+  flex-shrink: 0;
+  line-height: 1;
+}
+.faq-item[open] summary::after { content: "\2212"; }
+.faq-item .faq-answer {
+  padding: 0 0 1.4rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  max-width: 680px;
+}
 
 /* ---------- Legal / prose pages ---------- */
 .prose { max-width: 760px; }
